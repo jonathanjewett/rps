@@ -43,18 +43,18 @@ const playGame = () => {
   let playerScore = 0;
   let computerScore = 0;
 
-  for (let i = 0; i < 5; i++) {
-    let playerInput = prompt("Choose Rock, Paper, or Scissors");
-    let result = playRound(playerInput, getComputerChoice());
-    if (result.includes("Win")) {
-      playerScore++;
-    } else if (result.includes("Lose")) {
-      computerScore++;
-    }
-    console.log(result);
-    console.log("Player: " + playerScore);
-    console.log("Computer: " + computerScore);
-  }
+  // for (let i = 0; i < 5; i++) {
+  //   let playerInput = prompt("Choose Rock, Paper, or Scissors");
+  //   let result = playRound(playerInput, getComputerChoice());
+  //   if (result.includes("Win")) {
+  //     playerScore++;
+  //   } else if (result.includes("Lose")) {
+  //     computerScore++;
+  //   }
+  //   console.log(result);
+  //   console.log("Player: " + playerScore);
+  //   console.log("Computer: " + computerScore);
+  // }
 
   if (playerScore > computerScore) {
     return 'Player wins! Final Score ' + playerScore + ' to ' + computerScore;
