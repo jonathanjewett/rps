@@ -1,9 +1,28 @@
 console.log("Hello, World! And Tacos");
 
+//Button Code
+const rockBtn = document.querySelector('#rockBtn');
+const paperBtn = document.querySelector('#paperBtn');
+const scissorsBtn = document.querySelector('#scissorsBtn');
+
+rockBtn.addEventListener("click", function (e) {
+  console.log(playRound('ROCK', getComputerChoice()));
+});
+
+paperBtn.addEventListener("click", function (e) {
+  console.log(playRound('PAPER', getComputerChoice()));
+});
+
+scissorsBtn.addEventListener("click", function (e) {
+  console.log(playRound('SCISSORS', getComputerChoice()));
+});
+
 const getComputerChoice = () => {
   const compChoices = ["Rock", "Paper", "Scissors"];
   return compChoices[Math.floor(Math.random() * 3)];
 };
+
+let score = 0;
 
 // const playerSelection = 'paper';
 // const computerSelection = getComputerChoice();
@@ -39,32 +58,34 @@ const playRound = (playerSelection, computerSelection) => {
   }
 };
 
-const playGame = () => {
-  let playerScore = 0;
-  let computerScore = 0;
+// const playGame = () => {
+//   let playerScore = 0;
+//   let computerScore = 0;
 
-  // for (let i = 0; i < 5; i++) {
-  //   let playerInput = prompt("Choose Rock, Paper, or Scissors");
-  //   let result = playRound(playerInput, getComputerChoice());
-  //   if (result.includes("Win")) {
-  //     playerScore++;
-  //   } else if (result.includes("Lose")) {
-  //     computerScore++;
-  //   }
-  //   console.log(result);
-  //   console.log("Player: " + playerScore);
-  //   console.log("Computer: " + computerScore);
-  // }
+//   let result = playRound(playerInput, getComputerChoice());
+//   if (result.includes("Win")) {
+//     playerScore++;
+//   } else if (result.includes("Lose")) {
+//     computerScore++;
+//   }
+//   console.log(result);
+//   console.log("Player: " + playerScore);
+//   console.log("Computer: " + computerScore);
 
-  if (playerScore > computerScore) {
-    return 'Player wins! Final Score ' + playerScore + ' to ' + computerScore;
-  } else if (playerScore < computerScore) {
-    return 'Player loses! Final Score ' + playerScore + ' to ' + computerScore;
-  } else {
-    return 'You tied, wow, what are the chances?? Final Score ' + playerScore + ' to ' + computerScore;
-  }
-};
+//   if (playerScore > computerScore) {
+//     return "Player wins! Final Score " + playerScore + " to " + computerScore;
+//   } else if (playerScore < computerScore) {
+//     return "Player loses! Final Score " + playerScore + " to " + computerScore;
+//   } else {
+//     return (
+//       "You tied, wow, what are the chances?? Final Score " +
+//       playerScore +
+//       " to " +
+//       computerScore
+//     );
+//   }
+// };
 
 // console.log(playRound(playerSelection, computerSelection));
 
-console.log(playGame());
+// console.log(playGame());
